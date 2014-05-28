@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2011-2012 Litecoin Developers
+// Copyright (c) 2011-2012 WWFcoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -239,7 +239,7 @@ bool CDB::Rewrite(const string& strFile, const char* pszSkip)
                 { // surround usage of db with extra {}
                     CDB db(strFile.c_str(), "r");
                     Db* pdbCopy = new Db(&bitdb.dbenv, 0);
-    
+
                     int ret = pdbCopy->open(NULL,                 // Txn pointer
                                             strFileRes.c_str(),   // Filename
                                             "main",    // Logical db name
@@ -251,7 +251,7 @@ bool CDB::Rewrite(const string& strFile, const char* pszSkip)
                         printf("Cannot create database file %s\n", strFileRes.c_str());
                         fSuccess = false;
                     }
-    
+
                     Dbc* pcursor = db.GetCursor();
                     if (pcursor)
                         while (fSuccess)

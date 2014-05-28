@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2011-2012 Litecoin Developers
+// Copyright (c) 2011-2012 WWFcoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -997,7 +997,13 @@ void ThreadSocketHandler2(void* parg)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    {"some website name", "somewebsite.org (or ip)"},
+    {"jeronimek.sytes.net", "jeronimek.sytes.net"},
+    {"litecointools.com", "dnsseed.litecointools.com"},
+    {"litecoinpool.org", "dnsseed.litecoinpool.org"},
+    {"xurious.com", "dnsseed.ltc.xurious.com"},
+    {"koin-project.com", "dnsseed.koin-project.com"},
+    {"weminemnc.com", "dnsseed.weminemnc.com"},
+    {NULL, NULL}
 };
 
 void ThreadDNSAddressSeed(void* parg)
