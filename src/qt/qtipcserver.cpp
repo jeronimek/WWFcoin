@@ -31,10 +31,10 @@ void ipcInit() { }
 static void ipcThread(void* pArg)
 {
     IMPLEMENT_RANDOMIZE_STACK(ipcThread(pArg));
-	
+
     // Make this thread recognisable as the GUI-IPC thread
     RenameThread("bitcoin-gui-ipc");
-	
+
     try
     {
         ipcThread2(pArg);
@@ -85,7 +85,7 @@ void ipcInit()
     try {
         mq = new message_queue(open_or_create, BITCOINURI_QUEUE_NAME, 2, MAX_URI_LENGTH);
 
-        // Make sure we don't lose any barcoin: URIs
+        // Make sure we don't lose any WWFcoin: URIs
         for (int i = 0; i < 2; i++)
         {
             ptime d = boost::posix_time::microsec_clock::universal_time() + millisec(1);
